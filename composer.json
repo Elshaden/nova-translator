@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "elshaden/nova-translator",
+    "description": "This is my package nova-translator",
     "keywords": [
-        ":vendor_name",
+        "Elshaden",
         "laravel",
-        ":package_slug"
+        "nova-translator"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/elshaden/nova-translator",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Salah Elabbar",
+            "email": "info@elshaden.com",
             "role": "Developer"
         }
     ],
@@ -23,25 +23,23 @@
     "require-dev": {
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
         "orchestra/testbench": "^8.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "pestphp/pest-plugin-laravel": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
-        }
+            "Elshaden\\NovaTranslator\\": "src/",
+            "Elshaden\\NovaTranslator\\Database\\Factories\\": "database/factories/"
+        },
+        "files": [
+            "src/Helpers/helper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Elshaden\\NovaTranslator\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Elshaden\\NovaTranslator\\NovaTranslatorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "NovaTranslator": "Elshaden\\NovaTranslator\\Facades\\NovaTranslator"
             }
         }
     },
